@@ -28,7 +28,7 @@ gulp.task('styles', function () {
     .pipe($.sass({
       outputStyle: 'nested',
       precision: 10,
-      includePaths: ['.'],
+      includePaths: ['.', 'bower_components'],
       onError: console.error.bind(console, 'Sass error:')
     }))
     .pipe($.postcss([

@@ -1,6 +1,6 @@
 {
   "name": "flexboxgrid-sass",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "homepage": "https://github.com/tduarte/flexboxgrid-sass",
   "authors": [
     "@dam"
@@ -22,5 +22,6 @@
     "tests*"
   ],
   "dependencies": {
+    "sass-flex-mixin": "~1.0.1"
   }
 }

@@ -2,7 +2,7 @@
 // -- Start editing -- //
 //
 
-@import "../sass-flex-mixin/_flex";
+@import '../sass-flex-mixin/flex';
 
 // Set the number of columns you want to use on your layout.
 $grid-columns: 12 !default;
@@ -40,11 +40,11 @@ $half-gutter-width: $gutter-width * .5;
 }
 
 .row {
-  box-sizing: border-box;
   @include flexbox();
   @include flex(0, 1, auto);
   @include flex-direction(row);
   @include flex-wrap(wrap);
+  box-sizing: border-box;
   margin-right: $gutter-compensation;
   margin-left: $gutter-compensation;
 }
@@ -64,7 +64,7 @@ $half-gutter-width: $gutter-width * .5;
   @include flex-grow(0);
   @include flex-shrink(0);
 
-  // we leave @include flex-basis(auto) out of common because  
+  // we leave @include flex-basis(auto) out of common because
   // in some spots we need it and some we dont
   // more why here: https://github.com/kristoferjoseph/flexboxgrid/issues/126
 
@@ -73,10 +73,12 @@ $half-gutter-width: $gutter-width * .5;
 }
 
 $name: xs;
+
 .col-#{$name} {
   @include flexboxgrid-sass-col-common;
   @include flex-basis(auto);
 }
+
 @for $i from 1 through $grid-columns {
   .col-#{$name}-#{$i} {
     @include flexboxgrid-sass-col-common;
@@ -84,17 +86,20 @@ $name: xs;
     max-width: 100% / $grid-columns * $i;
   }
 }
+
 @for $i from 1 through $grid-columns {
   .col-#{$name}-offset-#{$i} {
     @include flexboxgrid-sass-col-common;
     margin-left: 100% / $grid-columns * $i;
   }
 }
+
 .col-#{$name} {
   @include flex-grow(1);
   @include flex-basis(0);
   max-width: 100%;
 }
+
 .start-#{$name} {
   @include justify-content(flex-start);
   text-align: start;
@@ -138,7 +143,6 @@ $name: xs;
   order: 1;
 }
 
-
 @each $breakpoint in $breakpoints {
   $name: nth($breakpoint, 1);
   $size: nth($breakpoint, 2);
@@ -152,6 +156,7 @@ $name: xs;
       @include flexboxgrid-sass-col-common;
       @include flex-basis(auto);
     }
+
     @for $i from 1 through $grid-columns {
       .col-#{$name}-#{$i} {
         @include flexboxgrid-sass-col-common;
@@ -159,17 +164,20 @@ $name: xs;
         max-width: 100% / $grid-columns * $i;
       }
     }
+
     @for $i from 1 through $grid-columns {
       .col-#{$name}-offset-#{$i} {
         @include flexboxgrid-sass-col-common;
-        margin-left: 100% / $grid-columns * $i
+        margin-left: 100% / $grid-columns * $i;
       }
     }
+
     .col-#{$name} {
       @include flex-grow(1);
       @include flex-basis(0);
       max-width: 100%;
     }
+
     .start-#{$name} {
       @include justify-content(flex-start);
       text-align: start;

@@ -213,7 +213,10 @@ header .top {
     position: relative;
     z-index: 15
 }
-
+header .site-author {
+  color: #FFF;
+  text-decoration: none;
+}
 header .wrap {
     position: absolute;
     width: 100%;

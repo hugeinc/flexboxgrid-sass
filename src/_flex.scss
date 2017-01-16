@@ -45,5 +45,9 @@
     .u-align-self#{$infix}-center   { align-self: center !important; }
     .u-align-self#{$infix}-baseline { align-self: baseline !important; }
     .u-align-self#{$infix}-stretch  { align-self: stretch !important; }
+
+    .u-align-text#{$infix}-left   { text-align: left !important; }
+    .u-align-text#{$infix}-center { text-align: center !important; }
+    .u-align-text#{$infix}-right  { text-align: right !important; }
   }
 }

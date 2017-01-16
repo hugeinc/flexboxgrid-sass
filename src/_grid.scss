@@ -1,199 +1,34 @@
-.wrapper {
-  box-sizing: border-box;
-  max-width: $grid-max-width;
-  margin: 0 auto;
+// Static container
+//
+// Set the container width, and override it for fixed navbars in media queries.
+.#{$grid-p}-container {
+  @include make-container();
+  @include make-container-max-widths();
 }
 
-.container-fluid, .container {
-  margin-right: auto;
-  margin-left: auto;
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+.#{$grid-p}-container-fluid {
+  @include make-container();
 }
 
-.container-fluid {
-  padding-right: $outer-margin;
-  padding-left: $outer-margin;
+.#{$grid-p}-row {
+  @include make-row();
 }
 
-.row {
-  box-sizing: border-box;
-  display: flex;
-  flex: 0, 1, auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-right: $gutter-compensation;
-  margin-left: $gutter-compensation;
-}
+// Remove the negative margin from default .row, then the horizontal padding
+// from all immediate children columns (to prevent runaway style inheritance).
+.#{$grid-p}-row__no-gutters {
+  margin-right: 0;
+  margin-left: 0;
 
-.row.reverse {
-  flex-direction: row-reverse;
-}
-
-.col.reverse {
-  flex-direction: column-reverse;
-}
-
-@mixin flexboxgrid-sass-col-common {
-  box-sizing: border-box;
-
-  // split @include flex(0, 0, auto) into individual props
-  flex-grow: 0;
-  flex-shrink: 0;
-
-  // we leave @include flex-basis(auto) out of common because
-  // in some spots we need it and some we dont
-  // more why here: https://github.com/kristoferjoseph/flexboxgrid/issues/126
-
-  padding-right: $half-gutter-width;
-  padding-left: $half-gutter-width;
-}
-
-$name: xs;
-.col-#{$name} {
-  @include flexboxgrid-sass-col-common;
-  flex-basis: auto;
-}
-@for $i from 1 through $grid-cols {
-  .col-#{$name}-#{$i} {
-    @include flexboxgrid-sass-col-common;
-    flex-basis: (100% / $grid-cols * $i);
-    max-width: 100% / $grid-cols * $i;
+  > .#{$grid-p}-col,
+  > [class*="#{$grid-p}-col-"] {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
-@for $i from 0 through $grid-cols {
-  .col-#{$name}-offset-#{$i} {
-    @include flexboxgrid-sass-col-common;
-    @if $i == 0 {
-      margin-left: 0;
-    } @else {
-      margin-left: 100% / $grid-cols * $i;
-    }
-  }
-}
-// .col-#{$name} {
-//   flex-grow: 1;
-//   flex-basis: 0;
-//   max-width: 100%;
-// }
-// .start-#{$name} {
-//   justify-content: flex-start;
-//   text-align: start;
-// }
-//
-// .center-#{$name} {
-//   justify-content: center;
-//   text-align: center;
-// }
-//
-// .end-#{$name} {
-//   justify-content: flex-end;
-//   text-align: end;
-// }
-//
-// .top-#{$name} {
-//   align-items: flex-start;
-// }
-//
-// .middle-#{$name} {
-//   align-items: center;
-// }
-//
-// .bottom-#{$name} {
-//   align-items: flex-end;
-// }
-//
-// .around-#{$name} {
-//   justify-content: space-around;
-// }
-//
-// .between-#{$name} {
-//   justify-content: space-between;
-// }
-//
-// .first-#{$name} {
-//   order: -1;
-// }
-//
-// .last-#{$name} {
-//   order: 1;
-// }
 
-//
-// @each $breakpoint in $breakpoints {
-//   $name: nth($breakpoint, 1);
-//   $size: nth($breakpoint, 2);
-//   $container: nth($breakpoint, 3);
-//   @media only screen and (min-width: $size) {
-//     .container {
-//       width: $container;
-//     }
-//
-//     .col-#{$name} {
-//       @include flexboxgrid-sass-col-common;
-//       flex-basis: auto;
-//     }
-//     @for $i from 1 through $grid-cols {
-//       .col-#{$name}-#{$i} {
-//         @include flexboxgrid-sass-col-common;
-//         flex-basis: (100% / $grid-cols * $i);
-//         max-width: 100% / $grid-cols * $i;
-//       }
-//     }
-//     @for $i from 0 through $grid-cols {
-//       .col-#{$name}-offset-#{$i} {
-//         @include flexboxgrid-sass-col-common;
-//         @if $i == 0 {
-//           margin-left: 0;
-//         } @else {
-//           margin-left: 100% / $grid-cols * $i;
-//         }
-//       }
-//     }
-//     .col-#{$name} {
-//       flex-grow: 1;
-//       flex-basis: 0;
-//       max-width: 100%;
-//     }
-//     .start-#{$name} {
-//       justify-content: flex-start;
-//       text-align: start;
-//     }
-//
-//     .center-#{$name} {
-//       justify-content: center;
-//       text-align: center;
-//     }
-//
-//     .end-#{$name} {
-//       justify-content: flex-end;
-//       text-align: end;
-//     }
-//
-//     .top-#{$name} {
-//       align-items: flex-start;
-//     }
-//
-//     .middle-#{$name} {
-//       align-items: center;
-//     }
-//
-//     .bottom-#{$name} {
-//       align-items: flex-end;
-//     }
-//
-//     .around-#{$name} {
-//       justify-content: space-around;
-//     }
-//
-//     .between-#{$name} {
-//       justify-content: space-between;
-//     }
-//
-//     .first-#{$name} {
-//       order: -1;
-//     }
-//
-//     .last-#{$name} {
-//       order: 1;
-//     }
-//   }
-// }
+@include make-grid-columns();

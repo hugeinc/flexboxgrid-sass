@@ -17,7 +17,7 @@ gulp.task('styles:demo', function () {
   return gulp.src('demo/sass/*')
     .pipe(sourcemaps.init())
     .pipe(sass({
-      outputStyle: 'nested',
+      outputStyle: 'expanded',
       precision: 10,
       includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')
@@ -35,7 +35,7 @@ gulp.task('styles:dist', function () {
   return gulp.src('src/flexboxgrid.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
-      outputStyle: 'nested',
+      outputStyle: 'expanded',
       precision: 10,
       includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')

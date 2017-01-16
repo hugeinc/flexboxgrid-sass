@@ -1,4 +1,4 @@
-Flexbox Grid Sass
+Flexbox Grid Sass (WORK IN PROGRESS!)
 ===========
 This work is an adaptation from the original [Flexbox Grid](http://flexboxgrid.com/) created by @kristoferjoseph.
 

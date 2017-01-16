@@ -1,0 +1,68 @@
+@mixin _assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+@mixin _assert-starts-at-zero($map) {
+  $values: map-values($map);
+  $first-value: nth($values, 1);
+  @if $first-value != 0 {
+    @warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
+  }
+}
+
+@mixin _assert-starts-at-one($map) {
+  $values: map-values($map);
+  $first-value: nth($values, 1);
+  @if $first-value != 1 {
+    @warn "First column in `$grid-columns` must start at 1, but starts at #{$first-value}.";
+  }
+}
+
+// Set the gutter between columns.
+$gutter-width: 1rem !default;
+$gutter-compensation: $gutter-width * .5 * -1;
+$half-gutter-width: $gutter-width * .5;
+
+// Set a margin for the container sides.
+$outer-margin: 2rem !default;
+
+// Set the number of columns you want to use on your layout.
+$grid-columns: (
+  xs: 1,
+  sm: 8,
+  md: 12,
+  lg: 16
+) !default;
+@include _assert-ascending($grid-columns, "$grid-columns");
+@include _assert-starts-at-one($grid-columns);
+$grid-cols: 12 !default; // deprecated
+
+// Create or remove breakpoints for your project
+$grid-breakpoints: (
+  xs: 0,
+  sm: 720px, // (48 em) - container: 45 em
+  md: 960px, // (62 em) - container: 60 em
+  lg: 1280px // (81 em) - container: 80 em
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+$breakpoints: // deprecated
+  sm 48em 46rem,
+  md 62em 61rem,
+  lg 75em 71rem !default;
+
+// match large column breakpoint value
+$grid-max-width: map-get($grid-breakpoints, lg);

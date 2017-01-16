@@ -1,73 +1,58 @@
-/*global -$ */
 'use strict';
-var gulp = require('gulp'),
-    $ = require('gulp-load-plugins')(),
-    jade = require('jade'),
-    gulpJade = require('gulp-jade');
+var gulp = require('gulp');
+var autoprefix = require('gulp-autoprefixer');
+var browserslist = require('browserslist');
+var sourcemaps = require('gulp-sourcemaps');
+var sass = require('gulp-sass');
+var del = require('del');
 
-jade.filters.code = function( block ) {
-    return block
-        .replace( /&/g, '&amp;' )
-        .replace( /</g, '&lt;' )
-        .replace( />/g, '&gt;' )
-        .replace( /"/g, '&quot;' );
-};
+var supported_browsers = browserslist('last 4 versions, > 1%, not ie <= 9');
 
-gulp.task('jade:demo', function () {
-  return gulp.src('./demo/*.jade')
-    .pipe(gulpJade({
-      jade: jade,
-      pretty: true
-    }))
-    .pipe(gulp.dest('./demo/'));
-});
+function logBrowserSupport(browsers) {
+  console.info('\nVendor prefixes will be applied for the following browsers:\n\n', browsers.join('\n'));
+}
+var supportedBrowsersWereLogged = false;
 
 gulp.task('styles:demo', function () {
   return gulp.src('demo/sass/*')
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
+    .pipe(sourcemaps.init())
+    .pipe(sass({
       outputStyle: 'nested',
       precision: 10,
-      includePaths: ['.', 'bower_components'],
+      includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')
     }))
-    .pipe($.sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('demo'));
 });
 
 gulp.task('styles:dist', function () {
+  if (!supportedBrowsersWereLogged) {
+    logBrowserSupport(supported_browsers);
+  }
+
   return gulp.src('*.scss')
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
+    .pipe(sourcemaps.init())
+    .pipe(sass({
       outputStyle: 'nested',
       precision: 10,
-      includePaths: ['.', 'bower_components'],
+      includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')
     }))
-    .pipe($.sourcemaps.write())
+    .pipe(autoprefix(supported_browsers))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean', require('del').bind(null, ['dist']));
+gulp.task("clean", () => {
+  return del([
+    "./dist"
+  ]);
+});
 
-gulp.task('watch', ['jade:demo', 'styles:demo', 'styles:dist'], function () {
-  // watch for changes
-  gulp.watch('demo/*.jade', ['jade:demo']);
+gulp.task('watch', ['styles:demo', 'styles:dist'], function () {
   gulp.watch('*.scss', ['styles:dist']);
-  gulp.watch('bower_components/**/*.scss', ['styles:dist']);
   gulp.watch('demo/sass/*.scss', ['styles:demo']);
-  gulp.watch('bower.json', ['wiredep']);
-});
-
-// inject bower components
-gulp.task('wiredep', function () {
-  var wiredep = require('wiredep').stream;
-
-  gulp.src('src/sass/*.scss')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
-    }))
-    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', function () {

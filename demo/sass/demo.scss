@@ -4,12 +4,15 @@
   box-sizing: border-box;
 }
 
-$huge-blue: #294b69;
-$huge-magenta: #ec008c;
-$huge-gray: #808080;
+$theme-blue: #294b69;
+$theme-magenta: #ec008c;
+$theme-gray: #808080;
+
+$theme-font1: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+$theme-font2: Gibson,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 
 body {
-  font-family: "Galaxie", Georgia, Helvetica, Arial, serif;
+  font-family: $theme-font1;
   line-height: 2;
   color: #444;
   margin: 0;
@@ -17,7 +20,7 @@ body {
 }
 
 .magenta {
-  color: $huge-magenta;
+  color: $theme-magenta;
 }
 
 .box, .box-first, .box-large, .box-nested, .box-row {
@@ -25,14 +28,14 @@ body {
   box-sizing: border-box;
   min-height: 2.25rem;
   margin-bottom: 0;
-  background: transparentize($huge-blue, 0.9);
+  background: transparentize($theme-blue, 0.9);
   border: 1px solid #FFF;
   border-radius: 2px;
   overflow: hidden;
   text-align: center;
-  color: $huge-blue;
+  color: $theme-blue;
   border-radius: 2px;
-  border: 1px solid lighten($huge-blue, 32%);
+  border: 1px solid lighten($theme-blue, 32%);
 }
 
 .box-large {
@@ -50,7 +53,7 @@ body {
 pre.prettyprint {
   overflow-x: auto;
   padding: 1.25em;
-  border: 1px solid lighten($huge-gray, 32%);
+  border: 1px solid lighten($theme-gray, 32%);
   border-left-width: 5px;
   margin: 1.6em 0;
   font-size: 1em;
@@ -81,7 +84,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: "HUGEAvantGardeBold", Helvetica, Arial, sans;
+    font-family: $theme-font2;
     -webkit-font-smoothing: antialiased
 }
 .main-title {
@@ -114,7 +117,7 @@ h5 {
 .button {
     border-radius: 0;
     line-height: 54px;
-    font-family: "HUGEAvantGardeBold", Helvetica, Arial, sans;
+    font-family: $theme-font2;
     font-size: 13px;
     text-align: center;
     text-transform: none;
@@ -134,7 +137,7 @@ h5 {
     border: 0
 }
 .button.primary:hover {
-    background-color: $huge-magenta
+    background-color: $theme-magenta
 }
 .button.secondary {
     border: 3px solid #000;
@@ -142,14 +145,14 @@ h5 {
     font-size: 15px
 }
 .button.secondary:hover {
-    border-color: $huge-magenta
+    border-color: $theme-magenta
 }
 ul {
     list-style: initial;
     margin-left: 20px
 }
 a {
-    color: $huge-magenta
+    color: $theme-magenta
 }
 a:hover {
     color: #d3007d
@@ -188,7 +191,7 @@ pre {
 header {
     width: 100%;
     height: 550px;
-    background-image: url("images/bg2.jpg");
+    background-image: url("images/bg4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -291,34 +294,6 @@ header.inner-fixed .hero {
 }
 .section.inner .button {
     margin-right: 15px
-}
-footer {
-    background-color: #000;
-    height: 200px;
-    margin-top: 100px;
-    text-align: center;
-    padding: 60px 0 0
-}
-footer .h {
-    display: inline-block;
-    width: 46px;
-    height: 54px;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAiCAYAAABBY8kOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAF1JREFUeNpi+E8YbABiBgJ4AyFDmBjoBEYtGrVo1KJRizABCxFqRIDYgQg1eAEjqMCjh49GLRq1aIRbdBSIawioaQFia0pLhjdAfIAINaOl96hFoxaNWjRYLQIIMABdEogcjpWdDQAAAABJRU5ErkJggg==") 50% 50% no-repeat;
-    text-decoration: none
-}
-footer .h:hover {
-    background-color: $huge-magenta;
-}
-footer p {
-    font-family: "HUGEAvantGardeBold", Helvetica, Arial, sans;
-    letter-spacing: -0.06em;
-    font-size: 15px;
-    color: #999;
-    margin-top: 16px
-}
-footer sup {
-    font-size: 7px;
-    vertical-align: super
 }
 body.home-fixed main,
 body.home-fixed-reload main {

@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Flexboxgrid Sass</title>
+  <title>Flexbox Grid Sass</title>
   <link rel="stylesheet" href="../dist/flexboxgrid.css"/>
-  <link rel="stylesheet" href="fonts/stylesheet.css"/>
   <link rel="stylesheet" href="demo.css"/>
-  <script type="text/javascript" src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
 <body>
   <header class="home u-cf bg">
     <div class="wrapper container-fluid">
       <div class="row between-xs top">
-        <div class="col-xs-2"><a href="index.html"><img src="images/huge-logo.svg"/></a></div>
+        <div class="col-xs-2">
+          <ul class="menu list-horz list-plain">
+            <li><a href="http://www.jpblanchette.com"><strong>JP Blanchette</strong></a></li>
+          </ul>
+        </div>
         <div class="col-xs-7">
           <ul class="menu list-horz list-plain">
-            <li><a href="https://github.com/hugeinc/flexboxgrid-sass/archive/master.zip">Download</a></li>
-            <li><a href="https://github.com/hugeinc/flexboxgrid-sass/blob/master/README.md">Getting Started</a></li>
+            <li><a href="https://github.com/empirecoder/flexboxgrid-sass/archive/master.zip">Download</a></li>
+            <li><a href="https://github.com/empirecoder/flexboxgrid-sass/blob/master/README.md">Getting Started</a></li>
           </ul>
         </div>
       </div>
@@ -25,9 +28,13 @@
     <div class="container-fluid hero">
       <div class="row center-xs middle-xs">
         <div class="col-xs-10">
-          <h1 class="main-title">Flexbox Grid Sass.</h1>
-          <p>A grid system that adapt to your project, and not otherwise.</p>
-          <div class="action"><a href="https://github.com/hugeinc/flexboxgrid-sass/archive/master.zip" class="button primary">Download Zip</a><a href="https://github.com/hugeinc/flexboxgrid-sass" target="_blank" class="button primary">Github Repository</a></div>
+          <h1 class="main-title">Flexbox Grid Sass</h1>
+          <p>A grid system based on the <code>flex</code> display property.<br>
+            With some funtionality from Bootstrap 4.</p>
+          <div class="action">
+            <a href="https://github.com/empirecoder/flexboxgrid-sass/archive/master.zip" class="button primary">Download Zip</a>
+            <a href="https://github.com/empirecoder/flexboxgrid-sass" target="_blank" class="button primary">Github Repository</a>
+          </div>
         </div>
       </div>
     </div>
@@ -36,7 +43,7 @@
     <main><a name="responsive"></a>
       <section class="page-section">
         <h2>Responsive</h2>
-        <p>Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs, sm, md & lg viewport widths.</p>
+        <p>Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs, sm, md &amp; lg viewport widths.</p>
         <div class="row">
           <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
             <div class="box-row"></div>
@@ -640,11 +647,10 @@
   <div class="container-fluid">
     <div class="row center-xs">
       <div class="col-xs">
-        <p>Inspired by <a href="flexboxgrid.com" target="_blank">Flexbox Grid</a>. Developed by <a href="http://www.thiago.in/" target="_blank">Thiago Duarte</a> @ Huge Inc.</p>
+        <p>Inspired by <a href="http://www.flexboxgrid.com" target="_blank">Flexbox Grid</a>.
+          Forked from <a href="http://hugeinc.github.io/flexboxgrid-sass/" target="_blank">Flexbox Grid Sass</a>.
+          Developed by <a href="http://www.jpblanchette.com/" target="_blank">JP Blanchette</a></p>
       </div>
     </div>
   </div>
-  <footer><a href="http://hugeinc.com" target="_blank" class="h"></a>
-    <p>Make something you love.<sup>TM</sup></p>
-  </footer>
 </body>

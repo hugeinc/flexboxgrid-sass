@@ -31,7 +31,7 @@ gulp.task('styles:dist', function () {
     logBrowserSupport(supported_browsers);
   }
 
-  return gulp.src('*.scss')
+  return gulp.src('src/flexboxgrid.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'nested',
@@ -39,7 +39,7 @@ gulp.task('styles:dist', function () {
       includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')
     }))
-    .pipe(autoprefix(supported_browsers))
+    // .pipe(autoprefix(supported_browsers)) // disable during dev
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist'));
 });

@@ -29,7 +29,7 @@ gulp.task('styles:demo', function () {
 gulp.task('styles:dist', function () {
   if (!supported_browsers_logged) {
     supported_browsers_logged = true;
-    // logBrowserSupport(supported_browsers);
+    logBrowserSupport(supported_browsers);
   }
 
   return gulp.src('src/flexboxgrid.scss')
@@ -40,7 +40,7 @@ gulp.task('styles:dist', function () {
       includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')
     }))
-    // .pipe(autoprefix(supported_browsers)) // disable during dev
+    .pipe(autoprefix(supported_browsers)) // disable during local dev only
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist'));
 });

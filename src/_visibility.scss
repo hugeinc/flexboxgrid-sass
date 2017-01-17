@@ -1,0 +1,16 @@
+// Responsive visibility utilities
+//
+// All classes are prefixed with `d` as in `display`.
+
+@each $bp in map-keys($grid-breakpoints) {
+  .d-hidden-#{$bp}-up {
+    @include media-breakpoint-up($bp) {
+      display: none !important;
+    }
+  }
+  .d-hidden-#{$bp}-down {
+    @include media-breakpoint-down($bp) {
+      display: none !important;
+    }
+  }
+}

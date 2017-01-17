@@ -11,7 +11,7 @@
 </head>
 <body>
   <header class="home u-cf bg">
-    <div class="l-container">
+    <div class="l-container-fluid">
       <div class="l-row u-align-content-between u-align-items-start">
         <div class="l-col-sm-2">
           <a href="http://www.jpblanchette.com" class="site-author"><strong>JP Blanchette</strong></a>
@@ -41,45 +41,193 @@
   </header>
   <div class="wrapper">
     <main>
-      <a name="responsive"></a>
+      <a href="responsive-grid"></a>
       <section class="page-section">
-        <h2>Responsive</h2>
-        <p>Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs, sm, md &amp; lg viewport widths.</p>
+        <h2>Responsive Grid</h2>
         <div class="l-container">
           <div class="l-row">
-            <div class="l-col-1 l-col-sm-2 l-col-md-2 l-col-lg-1">
-              <div class="box-row"></div>
-            </div>
-            <div class="l-col-1 l-col-sm-4 l-col-md-8 l-col-lg-14">
-              <div class="box-row"></div>
-            </div>
-            <div class="l-col-1 l-col-sm-2 l-col-md-2 l-col-lg-1">
-              <div class="box-row"></div>
-            </div>
-          </div>
-          <div class="l-row">
-            <div class="l-col-1 l-col-sm-2 l-col-md-2 l-col-lg-1">
-              <div class="box-row"></div>
-            </div>
-            <div class="l-col-1 l-col-sm-6 l-col-md-10 l-col-lg-15">
-              <div class="box-row"></div>
+            <div class="l-col l-col-sm-8 l-col-md-12 l-col-lg-16">
+              <div class="box-row">
+                <span class="d-none d-none-sm d-none-md d-block-lg">Large: 1260px</span>
+                <span class="d-none d-none-sm d-block-md d-none-lg">Medium: 940px</span>
+                <span class="d-none d-block-sm d-none-md d-none-lg">Small: 700px</span>
+                <span class="d-block d-none-sm d-none-md d-none-lg">X-Small: 100%</span>
+              </div>
             </div>
           </div>
           <div class="l-row">
-            <div class="l-col-1 l-col-sm-4 l-col-md-8 l-col-lg-13">
-              <div class="box-row"></div>
+      			<div class="l-col l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">1</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">2</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">3</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">4</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">5</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">6</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">7</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">8</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down l-col-md-1 l-col-lg-1">
+      				<div class="box-row">9</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down l-col-md-1 l-col-lg-1">
+      				<div class="box-row">10</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down l-col-md-1 l-col-lg-1">
+      				<div class="box-row">11</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down l-col-md-1 l-col-lg-1">
+      				<div class="box-row">12</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down d-hidden-md-down l-col-lg-1">
+      				<div class="box-row">13</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down d-hidden-md-down l-col-lg-1">
+      				<div class="box-row">14</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down d-hidden-md-down l-col-lg-1">
+      				<div class="box-row">15</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down d-hidden-md-down l-col-lg-1">
+      				<div class="box-row">16</div>
+      			</div>
+      		</div>
+        </div>
+      </section>
+
+      <a href="section-latest-layout"></a>
+      <section class="page-section">
+        <h2>Section latest layout</h2>
+        <div class="l-container">
+          <div class="l-row">
+      			<div class="l-col-1 l-col-sm-8 l-col-md-12 l-col-lg-3">
+      				<div class="box-row">1</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-8 l-col-md-8 l-col-lg-8">
+      				<div class="box-row">2</div>
+      			</div>
+      			<div class="d-hidden-md-down l-col-lg-1">
+      				<div class="box-row">3</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-8 l-col-md-4 l-col-lg-4">
+      				<div class="box-row">4</div>
+      			</div>
+      		</div>
+        </div>
+      </section>
+
+      <a href="section-list-layout"></a>
+      <section class="page-section">
+        <h2>Section list layout</h2>
+        <div class="l-container">
+          <div class="l-row">
+      			<div class="l-col-xs-12 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">1</div>
+      			</div>
+      			<div class="l-col-xs-12 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">2</div>
+      			</div>
+      			<div class="l-col-xs-12 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">3</div>
+      			</div>
+      			<div class="l-col-xs-12 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">4</div>
+      			</div>
+      		</div>
+        </div>
+      </section>
+
+      <a href="group-1-layout"></a>
+      <section class="page-section">
+        <h2>Group 1 layout</h2>
+        <div class="l-container">
+          <div class="l-row">
+      			<div class="l-col-1 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">1</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">2</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-4 l-col-md-2 l-col-lg-4">
+      				<div class="box-row">3</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-4 l-col-md-4 l-col-lg-4">
+      				<div class="box-row">4</div>
+      			</div>
+      		</div>
+        </div>
+      </section>
+
+      <a href="group-2-layout"></a>
+      <section class="page-section">
+        <h2>Group 2 layout</h2>
+        <div class="l-container">
+          <div class="l-row">
+      			<div class="l-col-1 l-col-sm-8 l-col-md-6 l-col-lg-8">
+      				<div class="box-row">1</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">2</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">3</div>
+      			</div>
+      		</div>
+        </div>
+      </section>
+
+      <a name="responsive-mods"></a>
+      <section class="page-section">
+        <h2>Responsive modifiers</h2>
+        <p>Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs, sm, md &amp; lg viewport widths.</p>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col l-col-sm-2 l-col-md-2 l-col-lg-1">
+              <div class="box-row">A1</div>
             </div>
-            <div class="l-col-1 l-col-sm-4 l-col-md-4 l-col-lg-3">
-              <div class="box-row"></div>
+            <div class="l-col l-col-sm-4 l-col-md-8 l-col-lg-14">
+              <div class="box-row">A2</div>
+            </div>
+            <div class="l-col l-col-sm-2 l-col-md-2 l-col-lg-1">
+              <div class="box-row">A3</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col l-col-sm-2 l-col-md-2 l-col-lg-1">
+              <div class="box-row">B1</div>
+            </div>
+            <div class="l-col l-col-sm-6 l-col-md-10 l-col-lg-15">
+              <div class="box-row">B2</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col l-col-sm-4 l-col-md-8 l-col-lg-13">
+              <div class="box-row">C1</div>
+            </div>
+            <div class="l-col l-col-sm-4 l-col-md-4 l-col-lg-3">
+              <div class="box-row">C2</div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;l-col-1
-              l-col-sm-4
-              l-col-md-8
-              l-col-lg-13&quot;&gt;
-      &lt;div class=&quot;box&quot;&gt;Responsive&lt;/div&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-col l-col-sm-2 l-col-md-2 l-col-lg-1&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;B1&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col l-col-sm-6 l-col-md-10 l-col-lg-15&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;B2&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </section>
@@ -88,58 +236,66 @@
       <section class="page-section"><br/>
         <h2>Fluid</h2>
         <p>Percent based widths allow fluid resizing of columns and rows.</p>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-1">
-              <div class="box-row"></div>
+            <div class="l-col">
+              <div class="box-row">8</div>
             </div>
           </div>
           <div class="l-row">
             <div class="l-col-sm-1">
-              <div class="box-row"></div>
+              <div class="box-row">1</div>
             </div>
-            <div class="l-col-xs-11">
-              <div class="box-row"></div>
-            </div>
-          </div>
-          <div class="l-row">
-            <div class="l-col-xs-2">
-              <div class="box-row"></div>
-            </div>
-            <div class="l-col-xs-10">
-              <div class="box-row"></div>
+            <div class="l-col-sm-7">
+              <div class="box-row">7</div>
             </div>
           </div>
           <div class="l-row">
-            <div class="l-col-xs-3">
-              <div class="box-row"></div>
+            <div class="l-col-sm-2">
+              <div class="box-row">2</div>
             </div>
-            <div class="l-col-xs-9">
-              <div class="box-row"></div>
-            </div>
-          </div>
-          <div class="l-row">
-            <div class="l-col-xs-4">
-              <div class="box-row"></div>
-            </div>
-            <div class="l-col-xs-8">
-              <div class="box-row"></div>
+            <div class="l-col-sm-6">
+              <div class="box-row">6</div>
             </div>
           </div>
           <div class="l-row">
-            <div class="l-col-xs-5">
-              <div class="box-row"></div>
+            <div class="l-col-sm-3">
+              <div class="box-row">3</div>
             </div>
-            <div class="l-col-xs-7">
-              <div class="box-row"></div>
+            <div class="l-col-sm-5">
+              <div class="box-row">5</div>
             </div>
           </div>
           <div class="l-row">
-            <div class="l-col-xs-6">
-              <div class="box-row"></div>
+            <div class="l-col-sm-4">
+              <div class="box-row">4</div>
             </div>
-            <div class="l-col-xs-6">
-              <div class="box-row"></div>
+            <div class="l-col-sm-4">
+              <div class="box-row">4</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col-sm-5">
+              <div class="box-row">5</div>
+            </div>
+            <div class="l-col-sm-3">
+              <div class="box-row">3</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col-sm-6">
+              <div class="box-row">6</div>
+            </div>
+            <div class="l-col-sm-2">
+              <div class="box-row">2</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col-sm-7">
+              <div class="box-row">7</div>
+            </div>
+            <div class="l-col-sm-1">
+              <div class="box-row">1</div>
             </div>
           </div>
         </div>
@@ -149,75 +305,66 @@
       <section class="page-section">
         <h2>Simple Syntax</h2>
         <p>All you need to remember is row, column, content.</p>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;l-col-xs-12&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;12&lt;/div&gt;
+<pre class="prettyprint">
+<code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-col&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;8&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-col-sm-1&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;1&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-7&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;7&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      </section><a name="offsets"></a>
+      </section>
+
+      <a name="offsets"></a>
       <section class="page-section">
         <h2>Offsets</h2>
         <p>Offset a column</p>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs-offset-11 l-col-xs-1">
-              <div class="box-row"></div>
+            <div class="l-offset-sm-7 l-col-sm-1">
+              <div class="box-row">1</div>
             </div>
           </div>
           <div class="l-row">
-            <div class="l-col-xs-offset-10 l-col-xs-2">
-              <div class="box-row"></div>
+            <div class="l-offset-sm-6 l-col-sm-2">
+              <div class="box-row">2</div>
             </div>
           </div>
           <div class="l-row">
-            <div class="l-col-xs-offset-9 l-col-xs-3">
-              <div class="box-row"></div>
+            <div class="l-offset-sm-5 l-col-sm-3">
+              <div class="box-row">3</div>
             </div>
           </div>
           <div class="l-row">
-            <div class="l-col-xs-offset-8 l-col-xs-4">
-              <div class="box-row"></div>
+            <div class="l-offset-sm-4 l-col-sm-4">
+              <div class="box-row">4</div>
             </div>
           </div>
           <div class="l-row">
-            <div class="l-col-xs-offset-7 l-col-xs-5">
-              <div class="box-row"></div>
+            <div class="l-offset-sm-3 l-col-sm-5">
+              <div class="box-row">5</div>
             </div>
           </div>
           <div class="l-row">
-            <div class="l-col-xs-offset-6 l-col-xs-6">
-              <div class="box-row"></div>
+            <div class="l-offset-sm-2 l-col-sm-6">
+              <div class="box-row">6</div>
             </div>
           </div>
           <div class="l-row">
-            <div class="l-col-xs-offset-5 l-col-xs-7">
-              <div class="box-row"></div>
-            </div>
-          </div>
-          <div class="l-row">
-            <div class="l-col-xs-offset-4 l-col-xs-8">
-              <div class="box-row"></div>
-            </div>
-          </div>
-          <div class="l-row">
-            <div class="l-col-xs-offset-3 l-col-xs-9">
-              <div class="box-row"></div>
-            </div>
-          </div>
-          <div class="l-row">
-            <div class="l-col-xs-offset-2 l-col-xs-10">
-              <div class="box-row"></div>
-            </div>
-          </div>
-          <div class="l-row">
-            <div class="l-col-xs-offset-1 l-col-xs-11">
-              <div class="box-row"></div>
+            <div class="l-offset-sm-1 l-col-sm-7">
+              <div class="box-row">7</div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;l-col-xs-offset-3 l-col-xs-9&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;offset&lt;/div&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-offset-sm-3 l-col-sm-5&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;5&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </section>
@@ -226,30 +373,33 @@
       <section class="page-section">
         <h2>Auto Width</h2>
         <p>Add any number of auto sizing columns to a row. Let the grid figure it out.</p>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs">
-              <div class="box-row"></div>
+            <div class="l-col">
+              <div class="box-row">1/2</div>
             </div>
-            <div class="l-col-xs">
-              <div class="box-row"></div>
+            <div class="l-col">
+              <div class="box-row">1/2</div>
             </div>
           </div>
           <div class="l-row">
-            <div class="l-col-xs">
-              <div class="box-row"></div>
+            <div class="l-col">
+              <div class="box-row">1/3</div>
             </div>
-            <div class="l-col-xs">
-              <div class="box-row"></div>
+            <div class="l-col">
+              <div class="box-row">1/3</div>
             </div>
-            <div class="l-col-xs">
-              <div class="box-row"></div>
+            <div class="l-col">
+              <div class="box-row">1/3</div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;l-col-xs&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;auto&lt;/div&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-col&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;1/2&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;1/2&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </section>
@@ -258,52 +408,13 @@
       <section class="page-section">
         <h2>Nested Grids</h2>
         <p>Nest grids inside grids inside grids.</p>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs-7">
-              <div class="box box-container">
-                <div class="l-row">
-                  <div class="l-col-xs-9">
-                    <div class="box-first box-container">
-                      <div class="l-row">
-                        <div class="l-col-xs-4">
-                          <div class="box-nested"></div>
-                        </div>
-                        <div class="l-col-xs-8">
-                          <div class="box-nested"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="l-col-xs-3">
-                    <div class="box-first box-container">
-                      <div class="l-row">
-                        <div class="l-col-xs">
-                          <div class="box-nested"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="l-col-lg-7">
+              <div class="box-row">1</div>
             </div>
-            <div class="l-col-xs-5">
-              <div class="box box-container">
-                <div class="l-row">
-                  <div class="l-col-xs-12">
-                    <div class="box-first box-container">
-                      <div class="l-row">
-                        <div class="l-col-xs-6">
-                          <div class="box-nested"></div>
-                        </div>
-                        <div class="l-col-xs-6">
-                          <div class="box-nested"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="l-col-lg-5">
+              <div class="box-row">2</div>
             </div>
           </div>
         </div>
@@ -325,7 +436,7 @@
         <h2>Alignment</h2>
         <p>Add classes to align elements to the start or end of a row as well as the top, bottom, or center of a column</p>
         <h3>.start-</h3>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
             <div class="l-col-xs-12">
               <div class="box box-container">
@@ -346,7 +457,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         <h3>.center-</h3>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
             <div class="l-col-xs-12">
               <div class="box box-container">
@@ -367,7 +478,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         <h3>.end-</h3>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
             <div class="l-col-xs-12">
               <div class="box box-container">
@@ -388,7 +499,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         <p>Here is an example of using the modifiers in conjunction to acheive different alignment at different viewport sizes.</p>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
             <div class="l-col-xs-12">
               <div class="box box-container">
@@ -410,7 +521,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         <h3>.top-</h3>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row top-xs">
             <div class="l-col-xs-6">
               <div class="box-large"></div>
@@ -428,7 +539,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         <h3>.middle-</h3>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row middle-xs">
             <div class="l-col-xs-6">
               <div class="box-large"></div>
@@ -446,7 +557,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         <h3>.bottom-</h3>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row bottom-xs">
             <div class="l-col-xs-6">
               <div class="box-large"></div>
@@ -470,7 +581,7 @@
         <h2>Distribution</h2>
         <p>Add classes to distribute the contents of a row or column.</p>
         <h3>.around-</h3>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
             <div class="l-col-xs-12">
               <div class="box box-container">
@@ -507,7 +618,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         <h3>.between-</h3>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
             <div class="l-col-xs-12">
               <div class="box box-container">
@@ -550,7 +661,7 @@
         <h2>Reordering</h2>
         <p>Add classes to reorder columns.</p>
         <h3>.first-</h3>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
             <div class="l-col-xs-12">
               <div class="box box-container">
@@ -596,7 +707,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         <h3>.last-</h3>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
             <div class="l-col-xs-12">
               <div class="box box-container">
@@ -647,7 +758,7 @@
       <section class="page-section">
         <h2>Reversing</h2>
         <h3>.reverse</h3>
-        <div class="l-container">
+        <div class="l-container-fluid">
           <div class="l-row">
             <div class="l-col-xs-12">
               <div class="box box-container">

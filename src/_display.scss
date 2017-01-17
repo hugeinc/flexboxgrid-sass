@@ -7,13 +7,13 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .d#{$infix}-none         { display: none !important; }
-    .d#{$infix}-inline       { display: inline !important; }
-    .d#{$infix}-inline-block { display: inline-block !important; }
-    .d#{$infix}-block        { display: block !important; }
-    .d#{$infix}-table        { display: table !important; }
-    .d#{$infix}-table-cell   { display: table-cell !important; }
-    .d#{$infix}-flex         { display: flex !important; }
-    .d#{$infix}-inline-flex  { display: inline-flex !important; }
+    .d-none#{$infix}         { display: none !important; }
+    .d-inline#{$infix}       { display: inline !important; }
+    .d-inline-block#{$infix} { display: inline-block !important; }
+    .d-block#{$infix}        { display: block !important; }
+    .d-table#{$infix}        { display: table !important; }
+    .d-table-cell#{$infix}   { display: table-cell !important; }
+    .d-flex#{$infix}         { display: flex !important; }
+    .d-inline-flex#{$infix}  { display: inline-flex !important; }
   }
 }

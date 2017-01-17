@@ -23,28 +23,9 @@ body {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%;
-}
-
-@media (min-width: 700px) {
-  .wrapper {
-    width: 720px;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 940px) {
-  .wrapper {
-    width: 960px;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 1260px) {
-  .wrapper {
-    width: 1280px;
-    max-width: 100%;
-  }
+  max-width: 1280px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .magenta {
@@ -54,7 +35,7 @@ body {
 .box, .box-first, .box-large, .box-nested, .box-row {
   position: relative;
   box-sizing: border-box;
-  min-height: 2.25rem;
+  min-height: 1.25rem;
   margin-bottom: 0;
   background: transparentize($theme-blue, 0.9);
   border: 1px solid #FFF;
@@ -71,7 +52,7 @@ body {
 }
 
 .box, .box-first, .box-large, .box-nested, .box-row {
-  padding: 1rem;
+  padding: 0.25rem;
 }
 
 .box-row {

@@ -19,6 +19,34 @@ body {
   padding: 0;
 }
 
+.wrapper {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    width: 720px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 940px) {
+  .wrapper {
+    width: 960px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1260px) {
+  .wrapper {
+    width: 1280px;
+    max-width: 100%;
+  }
+}
+
 .magenta {
   color: $theme-magenta;
 }

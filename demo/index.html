@@ -3,37 +3,24 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Flexbox Grid Sass</title>
+  <title>Flexbox Grid TGAM</title>
   <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/1da0911d/normalize.css"/>
   <link rel="stylesheet" href="../dist/flexboxgrid.css"/>
   <link rel="stylesheet" href="demo.css"/>
   <script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
 <body>
-  <header class="home u-cf bg">
+  <header>
     <div class="l-container-fluid">
-      <div class="l-row u-align-content-between u-align-items-start">
-        <div class="l-col-sm-2">
-          <a href="http://www.jpblanchette.com" class="site-author"><strong>JP Blanchette</strong></a>
-        </div>
-        <div class="l-col-sm-6">
-          <ul class="menu list-horz list-plain">
-            <li><a href="https://github.com/empirecoder/flexboxgrid-sass/archive/master.zip">Download</a></li>
-            <li><a href="https://github.com/empirecoder/flexboxgrid-sass/blob/master/README.md">Getting Started</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="l-container hero">
       <div class="l-row u-align-text-center u-align-items-center">
-        <div class="l-col-sm-8">
-          <h1 class="main-title">Flexbox Grid Sass</h1>
-          <p>A grid system based on the <code>flex</code> display property.<br>
+        <div class="l-col">
+          <h1 class="main-title">Flexbox Grid for TGAM</h1>
+          <p class="sub-title">A grid system based on the <code>flex</code> display property.<br>
             With similiar functionality to it's predecessor and Bootstrap 4.<br>
             Supports different column counts for multiple tiers.</p>
           <div class="action">
-            <a href="https://github.com/empirecoder/flexboxgrid-sass/archive/master.zip" class="button primary">Download Zip</a>
-            <a href="https://github.com/empirecoder/flexboxgrid-sass" target="_blank" class="button primary">Github Repository</a>
+            <a href="https://github.com/empirecoder/flexboxgrid-sass/archive/master.zip" class="button">Download Zip</a>
+            <a href="https://github.com/empirecoder/flexboxgrid-sass" target="_blank" class="button">Github Repository</a>
           </div>
         </div>
       </div>
@@ -110,7 +97,7 @@
 
       <a href="section-latest-layout"></a>
       <section class="page-section">
-        <h2>Section latest layout</h2>
+        <h2>Example: Section latest layout</h2>
         <div class="l-container">
           <div class="l-row">
       			<div class="l-col-1 l-col-sm-8 l-col-md-12 l-col-lg-3">
@@ -131,7 +118,7 @@
 
       <a href="section-list-layout"></a>
       <section class="page-section">
-        <h2>Section list layout</h2>
+        <h2>Example: Section list layout</h2>
         <div class="l-container">
           <div class="l-row">
       			<div class="l-col-xs-12 l-col-sm-4 l-col-md-3 l-col-lg-4">
@@ -152,7 +139,7 @@
 
       <a href="group-1-layout"></a>
       <section class="page-section">
-        <h2>Group 1 layout</h2>
+        <h2>Example: Group 1 layout</h2>
         <div class="l-container">
           <div class="l-row">
       			<div class="l-col-1 l-col-sm-4 l-col-md-3 l-col-lg-4">
@@ -173,7 +160,7 @@
 
       <a href="group-2-layout"></a>
       <section class="page-section">
-        <h2>Group 2 layout</h2>
+        <h2>Example: Group 2 layout</h2>
         <div class="l-container">
           <div class="l-row">
       			<div class="l-col-1 l-col-sm-8 l-col-md-6 l-col-lg-8">
@@ -303,20 +290,21 @@
 
       <a name="syntax"></a>
       <section class="page-section">
-        <h2>Simple Syntax</h2>
-        <p>All you need to remember is row, column, content.</p>
-<pre class="prettyprint">
-<code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
-  &lt;div class=&quot;l-col&quot;&gt;
-    &lt;div class=&quot;box-row&quot;&gt;8&lt;/div&gt;
+        <h2>BEM Style Syntax</h2>
+        <p>All you need to remember is container, row, column, content.</p>
+<pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-container OR l-container-fluid&quot;&gt;
+  &lt;div class=&quot;l-row&quot;&gt;
+    &lt;div class=&quot;l-col&quot;&gt;
+      &lt;div class=&quot;box-row&quot;&gt;8&lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;l-row&quot;&gt;
-  &lt;div class=&quot;l-col-sm-1&quot;&gt;
-    &lt;div class=&quot;box-row&quot;&gt;1&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;l-col-sm-7&quot;&gt;
-    &lt;div class=&quot;box-row&quot;&gt;7&lt;/div&gt;
+  &lt;div class=&quot;l-row&quot;&gt;
+    &lt;div class=&quot;l-col-sm-1&quot;&gt;
+      &lt;div class=&quot;box-row&quot;&gt;1&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;l-col-sm-7&quot;&gt;
+      &lt;div class=&quot;box-row&quot;&gt;7&lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </section>
@@ -433,144 +421,139 @@
 
       <a name="alignment"></a>
       <section class="page-section">
-        <h2>Alignment</h2>
+        <h2>Justify Content <small>(horizontally)</small></h2>
         <p>Add classes to align elements to the start or end of a row as well as the top, bottom, or center of a column</p>
-        <h3>.start-</h3>
         <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs-12">
+            <div class="l-col">
               <div class="box box-container">
-                <div class="l-row start-xs">
-                  <div class="l-col-xs-6">
-                    <div class="box-nested"></div>
+                <div class="l-row u-justify-content-start">
+                  <div class="l-col-sm-4">
+                    <div class="box-nested">Start</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row start-xs&quot;&gt;
-  &lt;div class=&quot;l-col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-justify-content-start&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      start
+      Start
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.center-</h3>
         <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs-12">
+            <div class="l-col">
               <div class="box box-container">
-                <div class="l-row center-xs">
-                  <div class="l-col-xs-6">
-                    <div class="box-nested"></div>
+                <div class="l-row u-justify-content-center">
+                  <div class="l-col-sm-4">
+                    <div class="box-nested">Center</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row center-xs&quot;&gt;
-  &lt;div class=&quot;l-col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-justify-content-center&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      center
+      Center
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.end-</h3>
         <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs-12">
+            <div class="l-col">
               <div class="box box-container">
-                <div class="l-row end-xs">
-                  <div class="l-col-xs-6">
-                    <div class="box-nested"></div>
+                <div class="l-row u-justify-content-end">
+                  <div class="l-col-sm-4">
+                    <div class="box-nested">End</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row end-xs&quot;&gt;
-  &lt;div class=&quot;l-col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row u-justify-content-end&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      end
+      End
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+        <h4>Example</h4>
         <p>Here is an example of using the modifiers in conjunction to acheive different alignment at different viewport sizes.</p>
         <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs-12">
+            <div class="l-col">
               <div class="box box-container">
-                <div class="l-row center-xs end-sm start-lg">
-                  <div class="l-col-xs-6">
-                    <div class="box-nested"></div>
+                <div class="l-row u-justify-content-sm-start u-justify-content-md-center u-justify-content-lg-end">
+                  <div class="l-col-sm-4">
+                    <div class="box-nested">All together now</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <h4>Example</h4>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row center-xs end-sm start-lg&quot;&gt;
-  &lt;div class=&quot;l-col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-justify-content-sm-start u-justify-content-md-center u-justify-content-lg-end&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       All together now
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.top-</h3>
+        <h3>Align Items <small>(vertically)</small></h3>
         <div class="l-container-fluid">
-          <div class="l-row top-xs">
-            <div class="l-col-xs-6">
-              <div class="box-large"></div>
+          <div class="l-row u-align-items-start">
+            <div class="l-col-sm-4">
+              <div class="box-large">Bigger</div>
             </div>
-            <div class="l-col-xs-6">
-              <div class="box"></div>
+            <div class="l-col-sm-4">
+              <div class="box">Top</div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row top-xs&quot;&gt;
-  &lt;div class=&quot;l-col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-align-items-start&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      top
+      Top
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.middle-</h3>
         <div class="l-container-fluid">
-          <div class="l-row middle-xs">
-            <div class="l-col-xs-6">
-              <div class="box-large"></div>
+          <div class="l-row u-align-items-center">
+            <div class="l-col-sm-4">
+              <div class="box-large">Bigger</div>
             </div>
-            <div class="l-col-xs-6">
-              <div class="box"></div>
+            <div class="l-col-sm-4">
+              <div class="box">Middle</div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row middle-xs&quot;&gt;
-  &lt;div class=&quot;l-col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-align-items-center&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      middle
+      Middle
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.bottom-</h3>
         <div class="l-container-fluid">
-          <div class="l-row bottom-xs">
-            <div class="l-col-xs-6">
-              <div class="box-large"></div>
+          <div class="l-row u-align-items-end">
+            <div class="l-col-sm-4">
+              <div class="box-large">Bigger</div>
             </div>
-            <div class="l-col-xs-6">
-              <div class="box"></div>
+            <div class="l-col-sm-4">
+              <div class="box">End</div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row bottom-xs&quot;&gt;
-  &lt;div class=&quot;l-col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-align-items-end&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      bottom
+      Bottom
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -806,6 +789,7 @@
       </section>
     </main>
   </div>
+  
   <div class="l-container">
     <div class="l-row u-align-text-center">
       <div class="l-col-1">

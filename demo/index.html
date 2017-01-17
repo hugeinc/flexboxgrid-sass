@@ -3,648 +3,798 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Flexboxgrid Sass</title>
+  <title>Flexbox Grid TGAM</title>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/1da0911d/normalize.css"/>
   <link rel="stylesheet" href="../dist/flexboxgrid.css"/>
-  <link rel="stylesheet" href="fonts/stylesheet.css"/>
   <link rel="stylesheet" href="demo.css"/>
-  <script type="text/javascript" src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
 <body>
-  <header class="home u-cf bg">
-    <div class="wrapper container-fluid">
-      <div class="row between-xs top">
-        <div class="col-xs-2"><a href="index.html"><img src="images/huge-logo.svg"/></a></div>
-        <div class="col-xs-7">
-          <ul class="menu list-horz list-plain">
-            <li><a href="https://github.com/hugeinc/flexboxgrid-sass/archive/master.zip">Download</a></li>
-            <li><a href="https://github.com/hugeinc/flexboxgrid-sass/blob/master/README.md">Getting Started</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid hero">
-      <div class="row center-xs middle-xs">
-        <div class="col-xs-10">
-          <h1 class="main-title">Flexbox Grid Sass.</h1>
-          <p>A grid system that adapt to your project, and not otherwise.</p>
-          <div class="action"><a href="https://github.com/hugeinc/flexboxgrid-sass/archive/master.zip" class="button primary">Download Zip</a><a href="https://github.com/hugeinc/flexboxgrid-sass" target="_blank" class="button primary">Github Repository</a></div>
+  <header>
+    <div class="l-container-fluid">
+      <div class="l-row u-align-text-center u-align-items-center">
+        <div class="l-col">
+          <h1 class="main-title">Flexbox Grid for TGAM</h1>
+          <p class="sub-title">A grid system based on the <code>flex</code> display property.<br>
+            With similiar functionality to it's predecessor and Bootstrap 4.<br>
+            Supports different column counts for multiple tiers.</p>
+          <div class="action">
+            <a href="https://github.com/empirecoder/flexboxgrid-sass/archive/master.zip" class="button">Download Zip</a>
+            <a href="https://github.com/empirecoder/flexboxgrid-sass" target="_blank" class="button">Github Repository</a>
+          </div>
         </div>
       </div>
     </div>
   </header>
-  <div class="wrapper container-fluid">
-    <main><a name="responsive"></a>
+  <div class="wrapper">
+    <main>
+      <a href="responsive-grid"></a>
       <section class="page-section">
-        <h2>Responsive</h2>
-        <p>Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs, sm, md & lg viewport widths.</p>
-        <div class="row">
-          <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
-            <div class="box-row"></div>
+        <h2>Responsive Grid</h2>
+        <div class="l-container">
+          <div class="l-row">
+            <div class="l-col l-col-sm-8 l-col-md-12 l-col-lg-16">
+              <div class="box-row">
+                <span class="d-none d-none-sm d-none-md d-block-lg">Large: 1260px</span>
+                <span class="d-none d-none-sm d-block-md d-none-lg">Medium: 940px</span>
+                <span class="d-none d-block-sm d-none-md d-none-lg">Small: 700px</span>
+                <span class="d-block d-none-sm d-none-md d-none-lg">X-Small: 100%</span>
+              </div>
+            </div>
           </div>
-          <div class="col-xs-6 col-sm-6 col-md-8 col-lg-10">
-            <div class="box-row"></div>
+          <div class="l-row">
+      			<div class="l-col l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">1</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">2</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">3</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">4</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">5</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">6</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">7</div>
+      			</div>
+      			<div class="d-hidden-xs-down l-col-sm-1 l-col-md-1 l-col-lg-1">
+      				<div class="box-row">8</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down l-col-md-1 l-col-lg-1">
+      				<div class="box-row">9</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down l-col-md-1 l-col-lg-1">
+      				<div class="box-row">10</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down l-col-md-1 l-col-lg-1">
+      				<div class="box-row">11</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down l-col-md-1 l-col-lg-1">
+      				<div class="box-row">12</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down d-hidden-md-down l-col-lg-1">
+      				<div class="box-row">13</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down d-hidden-md-down l-col-lg-1">
+      				<div class="box-row">14</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down d-hidden-md-down l-col-lg-1">
+      				<div class="box-row">15</div>
+      			</div>
+      			<div class="d-hidden-xs-down d-hidden-sm-down d-hidden-md-down l-col-lg-1">
+      				<div class="box-row">16</div>
+      			</div>
+      		</div>
+        </div>
+      </section>
+
+      <a href="section-latest-layout"></a>
+      <section class="page-section">
+        <h2>Example: Section latest layout</h2>
+        <div class="l-container">
+          <div class="l-row">
+      			<div class="l-col-1 l-col-sm-8 l-col-md-12 l-col-lg-3">
+      				<div class="box-row">1</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-8 l-col-md-8 l-col-lg-8">
+      				<div class="box-row">2</div>
+      			</div>
+      			<div class="d-hidden-md-down l-col-lg-1">
+      				<div class="box-row">3</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-8 l-col-md-4 l-col-lg-4">
+      				<div class="box-row">4</div>
+      			</div>
+      		</div>
+        </div>
+      </section>
+
+      <a href="section-list-layout"></a>
+      <section class="page-section">
+        <h2>Example: Section list layout</h2>
+        <div class="l-container">
+          <div class="l-row">
+      			<div class="l-col-xs-12 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">1</div>
+      			</div>
+      			<div class="l-col-xs-12 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">2</div>
+      			</div>
+      			<div class="l-col-xs-12 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">3</div>
+      			</div>
+      			<div class="l-col-xs-12 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">4</div>
+      			</div>
+      		</div>
+        </div>
+      </section>
+
+      <a href="group-1-layout"></a>
+      <section class="page-section">
+        <h2>Example: Group 1 layout</h2>
+        <div class="l-container">
+          <div class="l-row">
+      			<div class="l-col-1 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">1</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">2</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-4 l-col-md-2 l-col-lg-4">
+      				<div class="box-row">3</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-4 l-col-md-4 l-col-lg-4">
+      				<div class="box-row">4</div>
+      			</div>
+      		</div>
+        </div>
+      </section>
+
+      <a href="group-2-layout"></a>
+      <section class="page-section">
+        <h2>Example: Group 2 layout</h2>
+        <div class="l-container">
+          <div class="l-row">
+      			<div class="l-col-1 l-col-sm-8 l-col-md-6 l-col-lg-8">
+      				<div class="box-row">1</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">2</div>
+      			</div>
+      			<div class="l-col-1 l-col-sm-4 l-col-md-3 l-col-lg-4">
+      				<div class="box-row">3</div>
+      			</div>
+      		</div>
+        </div>
+      </section>
+
+      <a name="responsive-mods"></a>
+      <section class="page-section">
+        <h2>Responsive modifiers</h2>
+        <p>Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs, sm, md &amp; lg viewport widths.</p>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col l-col-sm-2 l-col-md-2 l-col-lg-1">
+              <div class="box-row">A1</div>
+            </div>
+            <div class="l-col l-col-sm-4 l-col-md-8 l-col-lg-14">
+              <div class="box-row">A2</div>
+            </div>
+            <div class="l-col l-col-sm-2 l-col-md-2 l-col-lg-1">
+              <div class="box-row">A3</div>
+            </div>
           </div>
-          <div class="col-xs-6 col-sm-3 col-md-2 col-lg-1">
-            <div class="box-row"></div>
+          <div class="l-row">
+            <div class="l-col l-col-sm-2 l-col-md-2 l-col-lg-1">
+              <div class="box-row">B1</div>
+            </div>
+            <div class="l-col l-col-sm-6 l-col-md-10 l-col-lg-15">
+              <div class="box-row">B2</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col l-col-sm-4 l-col-md-8 l-col-lg-13">
+              <div class="box-row">C1</div>
+            </div>
+            <div class="l-col l-col-sm-4 l-col-md-4 l-col-lg-3">
+              <div class="box-row">C2</div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
-            <div class="box-row"></div>
-          </div>
-          <div class="col-xs-12 col-sm-9 col-md-10 col-lg-11">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-10 col-sm-6 col-md-8 col-lg-10">
-            <div class="box-row"></div>
-          </div>
-          <div class="col-xs-2 col-sm-6 col-md-4 col-lg-2">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-12
-              col-sm-8
-              col-md-6
-              col-lg-4&quot;&gt;
-      &lt;div class=&quot;box&quot;&gt;Responsive&lt;/div&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-col l-col-sm-2 l-col-md-2 l-col-lg-1&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;B1&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col l-col-sm-6 l-col-md-10 l-col-lg-15&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;B2&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      </section><a name="fluid"></a>
+      </section>
+
+      <a name="fluid"></a>
       <section class="page-section"><br/>
         <h2>Fluid</h2>
         <p>Percent based widths allow fluid resizing of columns and rows.</p>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box-row"></div>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box-row">8</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col-sm-1">
+              <div class="box-row">1</div>
+            </div>
+            <div class="l-col-sm-7">
+              <div class="box-row">7</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col-sm-2">
+              <div class="box-row">2</div>
+            </div>
+            <div class="l-col-sm-6">
+              <div class="box-row">6</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col-sm-3">
+              <div class="box-row">3</div>
+            </div>
+            <div class="l-col-sm-5">
+              <div class="box-row">5</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col-sm-4">
+              <div class="box-row">4</div>
+            </div>
+            <div class="l-col-sm-4">
+              <div class="box-row">4</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col-sm-5">
+              <div class="box-row">5</div>
+            </div>
+            <div class="l-col-sm-3">
+              <div class="box-row">3</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col-sm-6">
+              <div class="box-row">6</div>
+            </div>
+            <div class="l-col-sm-2">
+              <div class="box-row">2</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-col-sm-7">
+              <div class="box-row">7</div>
+            </div>
+            <div class="l-col-sm-1">
+              <div class="box-row">1</div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-1">
-            <div class="box-row"></div>
-          </div>
-          <div class="col-xs-11">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-2">
-            <div class="box-row"></div>
-          </div>
-          <div class="col-xs-10">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-3">
-            <div class="box-row"></div>
-          </div>
-          <div class="col-xs-9">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4">
-            <div class="box-row"></div>
-          </div>
-          <div class="col-xs-8">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-5">
-            <div class="box-row"></div>
-          </div>
-          <div class="col-xs-7">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6">
-            <div class="box-row"></div>
-          </div>
-          <div class="col-xs-6">
-            <div class="box-row"></div>
-          </div>
-        </div>
-      </section><a name="syntax"></a>
+      </section>
+
+      <a name="syntax"></a>
       <section class="page-section">
-        <h2>Simple Syntax</h2>
-        <p>All you need to remember is row, column, content.</p>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-12&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;12&lt;/div&gt;
+        <h2>BEM Style Syntax</h2>
+        <p>All you need to remember is container, row, column, content.</p>
+<pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-container OR l-container-fluid&quot;&gt;
+  &lt;div class=&quot;l-row&quot;&gt;
+    &lt;div class=&quot;l-col&quot;&gt;
+      &lt;div class=&quot;box-row&quot;&gt;8&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-row&quot;&gt;
+    &lt;div class=&quot;l-col-sm-1&quot;&gt;
+      &lt;div class=&quot;box-row&quot;&gt;1&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;l-col-sm-7&quot;&gt;
+      &lt;div class=&quot;box-row&quot;&gt;7&lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      </section><a name="offsets"></a>
+      </section>
+
+      <a name="offsets"></a>
       <section class="page-section">
         <h2>Offsets</h2>
         <p>Offset a column</p>
-        <div class="row">
-          <div class="col-xs-offset-11 col-xs-1">
-            <div class="box-row"></div>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-offset-sm-7 l-col-sm-1">
+              <div class="box-row">1</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-offset-sm-6 l-col-sm-2">
+              <div class="box-row">2</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-offset-sm-5 l-col-sm-3">
+              <div class="box-row">3</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-offset-sm-4 l-col-sm-4">
+              <div class="box-row">4</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-offset-sm-3 l-col-sm-5">
+              <div class="box-row">5</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-offset-sm-2 l-col-sm-6">
+              <div class="box-row">6</div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="l-offset-sm-1 l-col-sm-7">
+              <div class="box-row">7</div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-offset-10 col-xs-2">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-offset-9 col-xs-3">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-offset-8 col-xs-4">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-offset-7 col-xs-5">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-offset-6 col-xs-6">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-offset-5 col-xs-7">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-offset-4 col-xs-8">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-offset-3 col-xs-9">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-offset-2 col-xs-10">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-offset-1 col-xs-11">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-offset-3 col-xs-9&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;offset&lt;/div&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-offset-sm-3 l-col-sm-5&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;5&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      </section><a name="auto"></a>
+      </section>
+
+      <a name="auto"></a>
       <section class="page-section">
         <h2>Auto Width</h2>
         <p>Add any number of auto sizing columns to a row. Let the grid figure it out.</p>
-        <div class="row">
-          <div class="col-xs">
-            <div class="box-row"></div>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box-row">1/2</div>
+            </div>
+            <div class="l-col">
+              <div class="box-row">1/2</div>
+            </div>
           </div>
-          <div class="col-xs">
-            <div class="box-row"></div>
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box-row">1/3</div>
+            </div>
+            <div class="l-col">
+              <div class="box-row">1/3</div>
+            </div>
+            <div class="l-col">
+              <div class="box-row">1/3</div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs">
-            <div class="box-row"></div>
-          </div>
-          <div class="col-xs">
-            <div class="box-row"></div>
-          </div>
-          <div class="col-xs">
-            <div class="box-row"></div>
-          </div>
-        </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;auto&lt;/div&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-col&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;1/2&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col&quot;&gt;
+    &lt;div class=&quot;box-row&quot;&gt;1/2&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      </section><a name="nested"></a>
+      </section>
+
+      <a name="nested"></a>
       <section class="page-section">
         <h2>Nested Grids</h2>
         <p>Nest grids inside grids inside grids.</p>
-        <div class="row">
-          <div class="col-xs-7">
-            <div class="box box-container">
-              <div class="row">
-                <div class="col-xs-9">
-                  <div class="box-first box-container">
-                    <div class="row">
-                      <div class="col-xs-4">
-                        <div class="box-nested"></div>
-                      </div>
-                      <div class="col-xs-8">
-                        <div class="box-nested"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-3">
-                  <div class="box-first box-container">
-                    <div class="row">
-                      <div class="col-xs">
-                        <div class="box-nested"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col-lg-7">
+              <div class="box-row">1</div>
             </div>
-          </div>
-          <div class="col-xs-5">
-            <div class="box box-container">
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="box-first box-container">
-                    <div class="row">
-                      <div class="col-xs-6">
-                        <div class="box-nested"></div>
-                      </div>
-                      <div class="col-xs-6">
-                        <div class="box-nested"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="l-col-lg-5">
+              <div class="box-row">2</div>
             </div>
           </div>
         </div>
         <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs&quot;&gt;
+  &lt;div class=&quot;l-col-xs&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;auto&lt;/div&gt;
       &lt;div class=&quot;row&quot;&gt;
-        &lt;div class=&quot;col-xs&quot;&gt;
+        &lt;div class=&quot;l-col-xs&quot;&gt;
           &lt;div class=&quot;box&quot;&gt;auto&lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      </section><a name="alignment"></a>
+      </section>
+
+      <a name="alignment"></a>
       <section class="page-section">
-        <h2>Alignment</h2>
+        <h2>Justify Content <small>(horizontally)</small></h2>
         <p>Add classes to align elements to the start or end of a row as well as the top, bottom, or center of a column</p>
-        <h3>.start-</h3>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box box-container">
-              <div class="row start-xs">
-                <div class="col-xs-6">
-                  <div class="box-nested"></div>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box box-container">
+                <div class="l-row u-justify-content-start">
+                  <div class="l-col-sm-4">
+                    <div class="box-nested">Start</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row start-xs&quot;&gt;
-  &lt;div class=&quot;col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-justify-content-start&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      start
+      Start
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.center-</h3>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box box-container">
-              <div class="row center-xs">
-                <div class="col-xs-6">
-                  <div class="box-nested"></div>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box box-container">
+                <div class="l-row u-justify-content-center">
+                  <div class="l-col-sm-4">
+                    <div class="box-nested">Center</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row center-xs&quot;&gt;
-  &lt;div class=&quot;col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-justify-content-center&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      center
+      Center
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.end-</h3>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box box-container">
-              <div class="row end-xs">
-                <div class="col-xs-6">
-                  <div class="box-nested"></div>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box box-container">
+                <div class="l-row u-justify-content-end">
+                  <div class="l-col-sm-4">
+                    <div class="box-nested">End</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row end-xs&quot;&gt;
-  &lt;div class=&quot;col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row u-justify-content-end&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      end
+      End
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <p>Here is an example of using the modifiers in conjunction to acheive different alignment at different viewport sizes.</p>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box box-container">
-              <div class="row center-xs end-sm start-lg">
-                <div class="col-xs-6">
-                  <div class="box-nested"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <h4>Example</h4>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row center-xs end-sm start-lg&quot;&gt;
-  &lt;div class=&quot;col-xs-6&quot;&gt;
+        <p>Here is an example of using the modifiers in conjunction to acheive different alignment at different viewport sizes.</p>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box box-container">
+                <div class="l-row u-justify-content-sm-start u-justify-content-md-center u-justify-content-lg-end">
+                  <div class="l-col-sm-4">
+                    <div class="box-nested">All together now</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-justify-content-sm-start u-justify-content-md-center u-justify-content-lg-end&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       All together now
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.top-</h3>
-        <div class="row top-xs">
-          <div class="col-xs-6">
-            <div class="box-large"></div>
-          </div>
-          <div class="col-xs-6">
-            <div class="box"></div>
+        <h3>Align Items <small>(vertically)</small></h3>
+        <div class="l-container-fluid">
+          <div class="l-row u-align-items-start">
+            <div class="l-col-sm-4">
+              <div class="box-large">Bigger</div>
+            </div>
+            <div class="l-col-sm-4">
+              <div class="box">Top</div>
+            </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row top-xs&quot;&gt;
-  &lt;div class=&quot;col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-align-items-start&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      top
+      Top
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.middle-</h3>
-        <div class="row middle-xs">
-          <div class="col-xs-6">
-            <div class="box-large"></div>
-          </div>
-          <div class="col-xs-6">
-            <div class="box"></div>
+        <div class="l-container-fluid">
+          <div class="l-row u-align-items-center">
+            <div class="l-col-sm-4">
+              <div class="box-large">Bigger</div>
+            </div>
+            <div class="l-col-sm-4">
+              <div class="box">Middle</div>
+            </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row middle-xs&quot;&gt;
-  &lt;div class=&quot;col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-align-items-center&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      middle
+      Middle
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.bottom-</h3>
-        <div class="row bottom-xs">
-          <div class="col-xs-6">
-            <div class="box-large"></div>
-          </div>
-          <div class="col-xs-6">
-            <div class="box"></div>
+        <div class="l-container-fluid">
+          <div class="l-row u-align-items-end">
+            <div class="l-col-sm-4">
+              <div class="box-large">Bigger</div>
+            </div>
+            <div class="l-col-sm-4">
+              <div class="box">End</div>
+            </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row bottom-xs&quot;&gt;
-  &lt;div class=&quot;col-xs-6&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-align-items-end&quot;&gt;
+  &lt;div class=&quot;l-col-sm-4&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      bottom
+      Bottom
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      </section><a name="distribution"></a>
+      </section>
+
+      <a name="distribution"></a>
       <section class="page-section">
         <h2>Distribution</h2>
         <p>Add classes to distribute the contents of a row or column.</p>
-        <h3>.around-</h3>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box box-container">
-              <div class="row around-xs">
-                <div class="col-xs-2">
-                  <div class="box-nested"></div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-nested"></div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-nested"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row around-xs&quot;&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;
-        around
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;
-      around
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;
-      around
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-        <h3>.between-</h3>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box box-container">
-              <div class="row between-xs">
-                <div class="col-xs-2">
-                  <div class="box-nested"></div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-nested"></div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-nested"></div>
+        <h3>Justify content around</h3>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box box-container">
+                <div class="l-row u-justify-content-around">
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">1</div>
+                  </div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">2</div>
+                  </div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">3</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row between-xs&quot;&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;
-      between
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;
-      between
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;
-      between
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-      </section><a name="reordering"></a>
-      <section class="page-section">
-        <h2>Reordering</h2>
-        <p>Add classes to reorder columns.</p>
-        <h3>.first-</h3>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box box-container">
-              <div class="row">
-                <div class="col-xs-2">
-                  <div class="box-first">1</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-first">2</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-first">3</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-first">4</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-first">5</div>
-                </div>
-                <div class="col-xs-2 first-xs">
-                  <div class="box-nested">6</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-justify-content-around&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       1
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       2
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;col-xs-2 first-xs&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       3
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.last-</h3>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box box-container">
-              <div class="row">
-                <div class="col-xs-2 last-xs">
-                  <div class="box-nested">1</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-first">2</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-first">3</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-first">4</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-first">5</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-first">6</div>
+        <h3>Justify content between</h3>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box box-container">
+                <div class="l-row u-justify-content-between">
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">1</div>
+                  </div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">2</div>
+                  </div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">3</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-2 last-xs&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-justify-content-between&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       1
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       2
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;
-      3
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-      </section><a name="reversing"></a>
-      <section class="page-section">
-        <h2>Reversing</h2>
-        <h3>.reverse</h3>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box box-container">
-              <div class="row reverse">
-                <div class="col-xs-2">
-                  <div class="box-nested">1</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-nested">2</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-nested">3</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-nested">4</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-nested">5</div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="box-nested">6</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row reverse&quot;&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;
-      1
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;
-      2
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       3
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </section>
+
+      <a name="reordering"></a>
+      <section class="page-section">
+        <h2>Reordering</h2>
+        <p>Add classes to reorder columns.</p>
+        <h3>Move column to first</h3>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box box-container">
+                <div class="l-row">
+                  <div class="l-col-sm-2">
+                    <div class="box-first">1</div>
+                  </div>
+                  <div class="l-col-sm-2">
+                    <div class="box-first">2</div>
+                  </div>
+                  <div class="l-col-sm-2 u-flex-first">
+                    <div class="box-first">3</div>
+                  </div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">4</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      1
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      2
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2 u-flex-first&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      3
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      4
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <h3>Move column to last</h3>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box box-container">
+                <div class="l-row">
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">1</div>
+                  </div>
+                  <div class="l-col-sm-2 u-flex-last">
+                    <div class="box-first">2</div>
+                  </div>
+                  <div class="l-col-sm-2">
+                    <div class="box-first">3</div>
+                  </div>
+                  <div class="l-col-sm-2">
+                    <div class="box-first">4</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      1
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2 u-flex-last&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      2
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      3
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      4
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <a name="reversing"></a>
+      <section class="page-section">
+        <h2>Reversing</h2>
+        <h3>Flex row reverse</h3>
+        <div class="l-container-fluid">
+          <div class="l-row">
+            <div class="l-col">
+              <div class="box box-container">
+                <div class="l-row u-flex-row-reverse">
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">1</div>
+                  </div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">2</div>
+                  </div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">3</div>
+                  </div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">4</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-flex-row-reverse&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      1
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      2
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      3
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      4
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </section>
     </main>
   </div>
-  <div class="container-fluid">
-    <div class="row center-xs">
-      <div class="col-xs">
-        <p>Inspired by <a href="flexboxgrid.com" target="_blank">Flexbox Grid</a>. Developed by <a href="http://www.thiago.in/" target="_blank">Thiago Duarte</a> @ Huge Inc.</p>
+
+  <div class="l-container">
+    <div class="l-row u-align-text-center">
+      <div class="l-col-1">
+        <p>Inspired by <a href="http://www.flexboxgrid.com" target="_blank">Flexbox Grid</a>,
+          <a href="http://hugeinc.github.io/flexboxgrid-sass/" target="_blank">Flexbox Grid Sass</a>, and
+          <a href="http://v4-alpha.getbootstrap.com" target="_blank">Bootstrap 4</a>.
+          Developed by <a href="http://www.jpblanchette.com/" target="_blank">JP Blanchette</a></p>
       </div>
     </div>
   </div>
-  <footer><a href="http://hugeinc.com" target="_blank" class="h"></a>
-    <p>Make something you love.<sup>TM</sup></p>
-  </footer>
 </body>

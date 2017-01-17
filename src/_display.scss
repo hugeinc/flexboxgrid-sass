@@ -1,0 +1,19 @@
+//
+// Display utilities
+//
+// All classes are prefixed with `d` as in `display`.
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .d-none#{$infix}         { display: none !important; }
+    .d-inline#{$infix}       { display: inline !important; }
+    .d-inline-block#{$infix} { display: inline-block !important; }
+    .d-block#{$infix}        { display: block !important; }
+    .d-table#{$infix}        { display: table !important; }
+    .d-table-cell#{$infix}   { display: table-cell !important; }
+    .d-flex#{$infix}         { display: flex !important; }
+    .d-inline-flex#{$infix}  { display: inline-flex !important; }
+  }
+}

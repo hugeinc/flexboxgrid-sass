@@ -1,20 +1,20 @@
-Flexbox Grid Sass
+Flexbox Grid for TGAM (EARLY WORK IN PROGRESS! ALPHA!)
 ===========
 This work is an adaptation from the original [Flexbox Grid](http://flexboxgrid.com/) created by @kristoferjoseph.
 
-Grid based on the `flex` display property. [Check the documentation](http://hugeinc.github.io/flexboxgrid-sass)
+Then forked from [Flexbox Grid Sass](http://hugeinc.github.io/flexboxgrid-sass/) created by @hugeinc.
+
+Grid based on the `flex` display property. [Check the documentation](http://empirecoder.github.io/flexboxgrid-sass)
 
 About
 ------
-By trying the [Flexbox Grid](http://flexboxgrid.com/) we saw the internal need to a SASS version of it. Thanks to the good work of Kristopher Joseph, we forked his project and sassified it.
+By trying the [Flexbox Grid](http://flexboxgrid.com/) we saw the internal need to a SASS version of it.
+Thanks to the good work of Kristopher Joseph, we forked his project and sassified it.
 
 Install
 ---------
 ### npm
-`npm i flexboxgrid-sass --save`
-
-### bower
-`bower install --save flexboxgrid-sass`
+`npm i flexboxgrid-tgam --save`
 
 Use
 ---------

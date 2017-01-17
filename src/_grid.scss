@@ -1,0 +1,34 @@
+// Static container
+//
+// Set the container width, and override it for fixed navbars in media queries.
+.#{$grid-p}-container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+.#{$grid-p}-container-fluid {
+  @include make-container();
+}
+
+.#{$grid-p}-row {
+  @include make-row();
+}
+
+// Remove the negative margin from default .row, then the horizontal padding
+// from all immediate children columns (to prevent runaway style inheritance).
+.#{$grid-p}-row__no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .#{$grid-p}-col,
+  > [class*="#{$grid-p}-col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@include make-grid-columns();

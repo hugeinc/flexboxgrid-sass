@@ -1,4 +1,4 @@
-Flexbox Grid Sass (WORK IN PROGRESS!)
+Flexbox Grid for TGAM (EARLY WORK IN PROGRESS! ALPHA!)
 ===========
 This work is an adaptation from the original [Flexbox Grid](http://flexboxgrid.com/) created by @kristoferjoseph.
 

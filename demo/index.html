@@ -563,77 +563,77 @@
       <section class="page-section">
         <h2>Distribution</h2>
         <p>Add classes to distribute the contents of a row or column.</p>
-        <h3>.around-</h3>
+        <h3>Justify content around</h3>
         <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs-12">
+            <div class="l-col">
               <div class="box box-container">
-                <div class="l-row around-xs">
-                  <div class="l-col-xs-2">
-                    <div class="box-nested"></div>
+                <div class="l-row u-justify-content-around">
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">1</div>
                   </div>
-                  <div class="l-col-xs-2">
-                    <div class="box-nested"></div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">2</div>
                   </div>
-                  <div class="l-col-xs-2">
-                    <div class="box-nested"></div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">3</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row around-xs&quot;&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-justify-content-around&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-        around
+      1
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      around
+      2
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      around
+      3
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.between-</h3>
+        <h3>Justify content between</h3>
         <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs-12">
+            <div class="l-col">
               <div class="box box-container">
-                <div class="l-row between-xs">
-                  <div class="l-col-xs-2">
-                    <div class="box-nested"></div>
+                <div class="l-row u-justify-content-between">
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">1</div>
                   </div>
-                  <div class="l-col-xs-2">
-                    <div class="box-nested"></div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">2</div>
                   </div>
-                  <div class="l-col-xs-2">
-                    <div class="box-nested"></div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">3</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row between-xs&quot;&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-justify-content-between&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      between
+      1
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      between
+      2
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
-      between
+      3
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -643,95 +643,93 @@
       <section class="page-section">
         <h2>Reordering</h2>
         <p>Add classes to reorder columns.</p>
-        <h3>.first-</h3>
+        <h3>Move column to first</h3>
         <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs-12">
+            <div class="l-col">
               <div class="box box-container">
                 <div class="l-row">
-                  <div class="l-col-xs-2">
+                  <div class="l-col-sm-2">
                     <div class="box-first">1</div>
                   </div>
-                  <div class="l-col-xs-2">
+                  <div class="l-col-sm-2">
                     <div class="box-first">2</div>
                   </div>
-                  <div class="l-col-xs-2">
+                  <div class="l-col-sm-2 u-flex-first">
                     <div class="box-first">3</div>
                   </div>
-                  <div class="l-col-xs-2">
-                    <div class="box-first">4</div>
-                  </div>
-                  <div class="l-col-xs-2">
-                    <div class="box-first">5</div>
-                  </div>
-                  <div class="l-col-xs-2 first-xs">
-                    <div class="box-nested">6</div>
+                  <div class="l-col-sm-2">
+                    <div class="box-nested">4</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       1
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       2
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-col-xs-2 first-xs&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2 u-flex-first&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       3
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      4
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h3>.last-</h3>
+        <h3>Move column to last</h3>
         <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs-12">
+            <div class="l-col">
               <div class="box box-container">
                 <div class="l-row">
-                  <div class="l-col-xs-2 last-xs">
+                  <div class="l-col-sm-2">
                     <div class="box-nested">1</div>
                   </div>
-                  <div class="l-col-xs-2">
+                  <div class="l-col-sm-2 u-flex-last">
                     <div class="box-first">2</div>
                   </div>
-                  <div class="l-col-xs-2">
+                  <div class="l-col-sm-2">
                     <div class="box-first">3</div>
                   </div>
-                  <div class="l-col-xs-2">
+                  <div class="l-col-sm-2">
                     <div class="box-first">4</div>
-                  </div>
-                  <div class="l-col-xs-2">
-                    <div class="box-first">5</div>
-                  </div>
-                  <div class="l-col-xs-2">
-                    <div class="box-first">6</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;l-col-xs-2 last-xs&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       1
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2 u-flex-last&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       2
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       3
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      4
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -740,61 +738,61 @@
       <a name="reversing"></a>
       <section class="page-section">
         <h2>Reversing</h2>
-        <h3>.reverse</h3>
+        <h3>Flex row reverse</h3>
         <div class="l-container-fluid">
           <div class="l-row">
-            <div class="l-col-xs-12">
+            <div class="l-col">
               <div class="box box-container">
-                <div class="l-row reverse">
-                  <div class="l-col-xs-2">
+                <div class="l-row u-flex-row-reverse">
+                  <div class="l-col-sm-2">
                     <div class="box-nested">1</div>
                   </div>
-                  <div class="l-col-xs-2">
+                  <div class="l-col-sm-2">
                     <div class="box-nested">2</div>
                   </div>
-                  <div class="l-col-xs-2">
+                  <div class="l-col-sm-2">
                     <div class="box-nested">3</div>
                   </div>
-                  <div class="l-col-xs-2">
+                  <div class="l-col-sm-2">
                     <div class="box-nested">4</div>
-                  </div>
-                  <div class="l-col-xs-2">
-                    <div class="box-nested">5</div>
-                  </div>
-                  <div class="l-col-xs-2">
-                    <div class="box-nested">6</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;row reverse&quot;&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+        <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;l-row u-flex-row-reverse&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       1
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       2
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;l-col-xs-2&quot;&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;
       3
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-col-sm-2&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      4
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </section>
     </main>
   </div>
-  
+
   <div class="l-container">
     <div class="l-row u-align-text-center">
       <div class="l-col-1">
-        <p>Inspired by <a href="http://www.flexboxgrid.com" target="_blank">Flexbox Grid</a>.
-          Forked from <a href="http://hugeinc.github.io/flexboxgrid-sass/" target="_blank">Flexbox Grid Sass</a>.
+        <p>Inspired by <a href="http://www.flexboxgrid.com" target="_blank">Flexbox Grid</a>,
+          <a href="http://hugeinc.github.io/flexboxgrid-sass/" target="_blank">Flexbox Grid Sass</a>, and
+          <a href="http://v4-alpha.getbootstrap.com" target="_blank">Bootstrap 4</a>.
           Developed by <a href="http://www.jpblanchette.com/" target="_blank">JP Blanchette</a></p>
       </div>
     </div>

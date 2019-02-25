@@ -147,7 +147,7 @@ $name: xs;
   $name: nth($breakpoint, 1);
   $size: nth($breakpoint, 2);
   $container: nth($breakpoint, 3);
-  @media only screen and (min-width: $size) {
+  @media screen and (min-width: $size) {
     .container {
       width: $container;
     }
